@@ -1,0 +1,152 @@
+{
+    "inputs": {
+        "temperature_cold_circuit_inlet": {
+            "description": "The temperature of the cooling water entering the lube oil cooler.",
+            "value range": {
+                "min": 30,
+                "max": 60
+            },
+            "unit": "C"
+        },
+        "massflow_cold_circuit": {
+            "description": "The mass flow rate of the cooling water through the circuit.",
+            "value range": {
+                "min": 40,
+                "max": 80
+            },
+            "unit": "kg/s"
+        },
+        "engine_load": {
+            "description": "The current load on the engine, which can influence the heat generated.",
+            "value range": {
+                "min": 0,
+                "max": 1
+            },
+            "unit": "None"
+        },
+        "setpoint_temperature_lube_oil": {
+            "description": "The setpoint temperature of the lube oil entering the engine.",
+            "value range": {
+                "min": 70,
+                "max": 80
+            },
+            "unit": "C"
+        }
+    },
+    "outputs": {
+        "temperature_cold_circuit_outlet": {
+            "description": "The temperature of the cooling water exiting the lube oil cooler.",
+            "value range": {
+                "min": 40,
+                "max": 60
+            },
+            "unit": "C"
+        },
+        "massflow_cold_circuit_outlet": {
+            "description": "The mass flow rate of the cooling water exiting the cooler.",
+            "value range": {
+                "min": 40,
+                "max": 80
+            },
+            "unit": "kg/s"
+        },
+        "temperature_lube_oil": {
+            "description": "The temperature of the lube oil entering the engine after being cooled.",
+            "value range": {
+                "min": 70,
+                "max": 80
+            },
+            "unit": "C"
+        },
+        "control_valve_position": {
+            "description": "The position of the control valve regulating the flow of lube oil through the cooler.",
+            "value range": {
+                "min": 0,
+                "max": 1
+            },
+            "unit": "None"
+        }
+    },
+    "parameters": {
+        "HE_heat_transfer_coefficient": {
+            "description": "Heat transfer coefficient of the lube oil cooler.",
+            "value range": {
+                "min": 0,
+                "max": "inf"
+            },
+            "unit": "W/m^2/K"
+        },
+        "HE_m1": {
+            "description": "Liquid mass on side 1 (hot side) of the lube oil cooler.",
+            "value range": {
+                "min": 0,
+                "max": "inf"
+            },
+            "unit": "kg"
+        },
+        "HE_m2": {
+            "description": "Liquid mass on side 2 (cold side) of the lube oil cooler.",
+            "value range": {
+                "min": 0,
+                "max": "inf"
+            },
+            "unit": "kg"
+        },
+        "HE_surface_area": {
+            "description": "Heat transfer surface area in the lbe oil cooler",
+            "value range": {
+                "min": 0,
+                "max": "inf"
+            },
+            "unit": "m^2"
+        },
+        "LO_mass_flow": {
+            "description": "Lube oil mass flow rate.",
+            "value range": {
+                "min": 0,
+                "max": 100
+            },
+            "unit": "kg/s"
+        },
+        "engine_max_load": {
+            "description": "Maximum load of the engine in percentage.",
+            "value range": {
+                "min": 0,
+                "max": 1
+            },
+            "unit": "None"
+        },
+        "cp_water": {
+            "description": "Specific heat capacity of water.",
+            "value range": {
+                "min": 3768,
+                "max": 4217
+            },
+            "unit": "J/kg/K"
+        },
+        "cp_oil": {
+            "description": "Specific heat capacity of lubrication oil.",
+            "value range": {
+                "min": 1760,
+                "max": 2340
+            },
+            "unit": "J/kg/K"
+        },
+        "PID_parameters_P_ideal": {
+            "description": "Proportional gain of an ideal PID controller.",
+            "value range": {
+                "min": "-inf",
+                "max": "inf"
+            },
+            "unit": "None"
+        },
+        "PID_parameters_I_ideal": {
+            "description": "Integral gain of an ideal PID controller.",
+            "value range": {
+                "min": "-inf",
+                "max": "inf"
+            },
+            "unit": "None"
+        }
+    }
+}
