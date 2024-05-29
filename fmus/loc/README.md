@@ -22,7 +22,19 @@ Descriptions of all parameters, input, and output signals, together with typical
 The FMU `LOC.fmu` was exported from the Simulink model `LOC.slx` using MATLAB 2024a and the [FMU Builder for Simulink tool](https://www.mathworks.com/products/fmubuilder.html). The following MATLAB toolboxes are required for exporting the model:
 - Simulink Compiler
 
+## Testing the FMU
+The FMU can be simulated/tested with the [`fmpy.gui`](https://fmpy.readthedocs.io/en/latest/tutorial/). 
+
+### Simulation parameters
+
+The output interval has to be specified and as an input file a time series of the inputs in `.csv` file has to be provided. Example input file (`LOC_in.csv`) uploaded here.
+
+### Results with the LOC_in.csv and stop time of 2000
+![results of the simulation](https://iili.io/JQSIwlV.md.png)
+
 ## TODO
 - Review I/O and parameter names in FMU
 - Define internal variables for simulation
 - Add units and descriptions to signals in FMU
+
+
