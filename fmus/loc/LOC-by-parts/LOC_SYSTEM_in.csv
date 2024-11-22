@@ -1,5 +1,0 @@
-time,"INPUT_temperature_cold_circuit_inlet","INPUT_massflow_cold_circuit","INPUT_engine_load_0_1","INPUT_control_valve_position"
-0,60,60,0.5,0.5
-100,60,60,0.5,0.5
-101,70,60,1,0
-
